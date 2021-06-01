@@ -1,0 +1,27 @@
+ALGORITHM checkpoint 1 algo
+VAR
+    sentence : STRING := '';
+	c : CHAR := '';
+	nb_char: INTEGER := 0;
+	nb_word : INTEGER := 0;
+	nb_vowel : INTEGER := 0;
+
+BEGIN
+    Read(sentence);
+	FOR i FROM 0 TO sentence.length STEP i++  DO
+		WHILE (c != '.') DO
+            nb_char := nb_char+1
+            IF (c = 'a' or c = 'e' or c = 'u' or c = 'i' or c = 'y' or c = 'o') THEN
+                nb_vowel := nb_vowel +1;
+            END_IF
+            IF (c = '') THEN
+                nb_word := nb_word +1;
+            END_IF
+            nb_char = nb_word - 1
+        END_WHILE
+	END_FOR
+	
+    Write('The length of the sentence ', nb_char);
+	Write('the number of words', nb_words);
+	Write('the number of vowels',nb_vowel);
+END

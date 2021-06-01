@@ -5,6 +5,7 @@ VAR
 	nb_char: INTEGER := 0;
 	nb_word : INTEGER := 0;
 	nb_vowel : INTEGER := 0;
+    i : INTEGER; // declaring the index for each element in the string.
 
 BEGIN
     Read(sentence);
